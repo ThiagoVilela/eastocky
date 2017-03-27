@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Eastocky - Sua plataforma de estoque inteligente</title>
+<link href="css/cadastrostyle.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<!--google fonts-->
+<link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<script src="js/jquery-2.1.4.min.js"></script>
+</head>
+<body>		
+	<!-- login -->
+		<div class="login-section">
+		<div class="lo-im w3agile">							
+			<img src="images/logo1.png" title="logo" alt="logo" />	
+		</div>
+		<h1>Cadastre um produto</h1>
+	        <div class="login w3l">	
+				<div class="modal-content modal-info">
+				
+				</div>
+			<!-- //login -->
+					<div class="clear"></div>
+				</div> 
+				<div class="signup">
+			<div class="modal-content modal-info">
+				<div class="modal-header">				
+					<h3>Preencha os campos</h3>						
+				</div>
+				<div class="modal-body modal-spa">
+					<div class="login-form">			
+						<form action="#" method="post" id="signup">
+						<ol>
+						<li>
+								<input type="text" id="name" name="codigo" placeholder="Digite o código" title="Codigo" required />
+								
+							</li>
+							<li>
+								<input type="text" id="name" name="nome" placeholder="Digite o nome" title="nome" required />
+								
+							</li>
+							<li>
+								<input type="text" id="name" name="preco" placeholder="Digite o preço do produto" title="preco" required />
+								
+							</li>
+							<li>
+								<input type="text" id="name" name="quantidade" placeholder="Digite a quantidade" title="quantidade" required />
+								
+							</li>
+							<li>
+								<input type="text" id="name" name="estado" placeholder="Digite o estado" title="estado" required />
+								
+							</li>
+							<li>
+								<input type="text" id="name" name="obs" placeholder="Digite uma observação" title="estado" />
+								
+							</li>
+							
+							</ol>
+							
+							<input type="submit" value="Cadastrar produto">
+						</form>	
+						<!-- script for password confirmation -->
+						<script type="text/javascript">
+							window.onload = function () {
+								document.getElementById("password1").onchange = validatePassword;
+								document.getElementById("password2").onchange = validatePassword;
+							}
+							function validatePassword(){
+							var pass2=document.getElementById("password2").value;
+							var pass1=document.getElementById("password1").value;
+							if(pass1!=pass2)
+								document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+							else
+							document.getElementById("password2").setCustomValidity('');	 
+							//empty string means no validation error
+							}
+						</script>
+						<!-- //script for password confirmation -->
+																											
+						</div>									
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<p class="footer">© 2017 Eastocky | Projetado para disciplina de Sistemas Distribuídos</a></p>
+			</div>	
+			
+</body>
+</html>

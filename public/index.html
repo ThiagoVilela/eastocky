@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Eastocky - Sua plataforma de estoque inteligente</title>
+<link href="public/css/loginstyle.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<!--google fonts-->
+<link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<script src="public/js/jquery-2.1.4.min.js"></script>
+</head>
+<body>		
+	<!-- login -->
+		<div class="login-section">
+		<div class="lo-im w3agile">							
+			<img src="public/images/logo1.png" title="logo" alt="logo" />	
+		</div>
+		<h1>Bem vindo ao Eastocky</h1>
+	        <div class="login w3l">	
+				<div class="modal-content modal-info">
+					<div class="modal-header">
+							<h2>Login</h2>	
+					</div>
+					<div class="modal-body modal-spa">
+						<div class="login-form">			
+							<form action="/user/login" method="post">
+								<input type="text" id="username" class="user" name="username" placeholder="Digite seu email" required="" />
+								<input type="password" id="password" class="lock" name="password" placeholder="Digite sua senha" required="" />
+								<div class="signin-rit">
+								<div class="clear"> </div>
+								</div>
+								<input type="button" onClick="send()" value="Login">
+							</form>	
+						</div>								
+					</div>
+				</div>
+			<!-- //login -->
+					<div class="clear"></div>
+				</div> 
+																	
+						</div>									
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<p class="footer">© 2017 Eastocky | Projetado para disciplina de Sistemas Distribuídos</a></p>
+			</div>	
+
+	<script type="text/javascript">
+		 function send(){
+			console.log("CHamou a funcao");
+			  $.ajax({
+				url: 'localhost:9000/user/login',
+				method: 'POST',
+				dataType: 'json',
+				data: {
+				   email: $("#username").val(),
+				   senha: $("#password").val()
+				},
+				success(response) {
+					console.log("DEU BOM");
+				   location.assign("localhost:9000/cadastrousuario.html");
+				},
+				error(){console.log("ENTROU NO ERRO");}
+			     });
+		}
+	</script>
+			
+</body>
+</html>
